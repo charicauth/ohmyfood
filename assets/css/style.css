@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+  color: #101010;
+}
+
+body {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+body a {
+  text-decoration: none;
+}
+body header {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+body header .logo {
+  justify-self: center;
+  align-self: center;
+  width: 100%;
+  background-color: #FFF;
+  z-index: 4;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+body header .logo a {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0.88rem 5.56rem;
+}
+body header .location {
+  justify-self: center;
+  align-self: center;
+  width: 100%;
+  background-color: #EAEAEA;
+}
+body header .location a {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.06rem;
+  height: 3.125rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #353535;
+}
+body main {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+body main .title {
+  flex-shrink: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #101010;
+}
+body main .welcome {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  background-color: #F6F6F6;
+}
+body main .welcome .title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.4rem;
+  width: 17.2rem;
+  text-align: center;
+}
+body main .welcome .text {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  width: 19.7rem;
+  flex-shrink: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  text-align: center;
+}
+body main .welcome .cta {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-weight: 500;
+  margin: 2.5rem auto 4.4rem auto;
+  width: 13.625rem;
+  height: 3.125rem;
+  flex-shrink: 0;
+  border-radius: 1.5625rem;
+  background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+body main .functionning {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 3rem 1.25rem 4.25rem 1.25rem;
+}
+body main .restaurants {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 3rem 1.25rem 4.25rem 1.25rem;
+}
+
+/*# sourceMappingURL=style.css.map */

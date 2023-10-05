@@ -1,0 +1,164 @@
+//  Google Fonts
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
+
+
+// Font Variables
+ $roboto: 'Roboto', sans-serif;
+ $shrikhand: 'Shrikhand', cursive;
+
+
+//  Color Variables
+ $white: #FFF;
+ $green: #008766;
+ $light-green: #99E2D0;
+ $light-blue: #89C8FA;
+ $blue: #003A68;
+ $purple: #9356DC;
+ $lighter-grey: #F6F6F6;
+ $light-grey: #EAEAEA;
+ $grey: #353535;
+ $black: #101010;
+
+ * {
+    font-family: $roboto;
+    color: $black;
+ }
+
+ body {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+    }
+
+    header {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+
+        .logo {
+            justify-self: center;
+            align-self: center;
+            width: 100%;
+            background-color: $white;
+            z-index: 4;
+
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
+            a {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: center;
+                margin: .88rem 5.56rem;
+
+            }
+        }
+
+        .location {
+            justify-self: center;
+            align-self: center;
+            width: 100%;
+            background-color: $light-grey;
+
+            a {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: center;
+                gap:1.06rem;
+                height: 3.125rem;
+                font-family: $roboto;
+                font-weight: 500;
+                color: $grey;
+            }
+
+        }
+    }
+
+    main {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+
+        .title {
+            flex-shrink: 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: $black;
+        }
+
+        .welcome {
+            width: 100%;
+            display: flex;
+            flex-flow: column wrap;
+            background-color: $lighter-grey;
+
+            .title {
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 2.4rem;
+                width: 17.2rem;
+                text-align: center;
+
+            }
+            
+            .text {
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: auto;
+                width: 19.7rem;
+                flex-shrink: 0;
+                font-family: $roboto;
+                font-size: 1.125rem;
+                font-weight: 300;
+                text-align: center;
+            }
+
+            .cta {
+                display:flex;
+                flex-flow: row;
+                justify-content: center;
+                align-items: center;
+                color: $white;
+                font-weight: 500;
+
+                margin: 2.5rem auto 4.4rem auto; ;
+                width: 13.625rem;
+                height: 3.125rem;
+                flex-shrink: 0;
+                border-radius: 1.5625rem;
+                background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+                
+                box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+            }
+
+        }
+
+        .functionning {
+            width: 100%;
+            display: flex;
+            flex-flow: column wrap;
+            padding: 3rem 1.25rem 4.25rem 1.25rem;
+
+        }
+
+        .restaurants {
+            width: 100%;
+            display: flex;
+            flex-flow: column wrap;
+            padding: 3rem 1.25rem 4.25rem 1.25rem;
+        }
+    }
+
+
+ }
