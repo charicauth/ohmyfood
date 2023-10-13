@@ -98,7 +98,7 @@ body main .welcome .cta {
   align-items: center;
   color: #FFF;
   font-weight: 500;
-  margin: 2.5rem auto 4.4rem auto;
+  margin: 1.6rem auto 4rem auto;
   width: 13.625rem;
   height: 3.125rem;
   flex-shrink: 0;
@@ -110,7 +110,72 @@ body main .functionning {
   width: 100%;
   display: flex;
   flex-flow: column wrap;
-  padding: 3rem 1.25rem 4.25rem 1.25rem;
+  padding: 3rem 1.5rem 3.25rem 1.5rem !important;
+}
+body main .functionning .functionning-options {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 1.62rem;
+  padding-left: 0.8rem;
+}
+body main .functionning .functionning-options .card {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-items: center;
+  align-items: center;
+  gap: 1rem;
+  width: 24.16rem;
+  padding: 1.79rem 2.38rem 1.79rem 0rem;
+  background-color: white;
+  border-radius: 1.25rem;
+  background: var(--Background, #F6F6F6);
+  /* Shadow/Instructions */
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  /*   position: relative; */
+}
+body main .functionning .functionning-options .card-body {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-items: center;
+  align-items: center;
+  gap: 1.69rem;
+}
+body main .functionning .functionning-options .fa-mobile-screen-button {
+  width: 0.81369rem;
+  height: 1.24394rem;
+  flex-shrink: 0;
+}
+body main .functionning .functionning-options .card-content {
+  font-family: "Roboto" sans-serif;
+  font-weight: 500;
+}
+body main .functionning .functionning-options .bubble {
+  width: fit-content;
+  position: relative;
+  left: -0.75rem;
+}
+body main .functionning .functionning-options .card-bubble-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  font-size: 0.9rem;
+  color: white;
+  border-radius: 100%;
+  background-color: #9356DC;
+}
+body main .functionning .functionning-options .fa-store {
+  color: #9356DC;
+}
+body main .functionning .functionning-options .fa-mobile-screen-button, body main .functionning .functionning-options .fa-list-ul {
+  color: #7E7E7E;
 }
 body main .restaurants {
   width: 100%;
