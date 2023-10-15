@@ -14,9 +14,11 @@
  $light-blue: #89C8FA;
  $blue: #003A68;
  $purple: #9356DC;
+ $pink: #FF79DA;
  $lighter-grey: #F6F6F6;
  $light-grey: #EAEAEA;
  $grey-tint-4: #7E7E7E;
+ $grey-tint-5: #F6F6F6;
  $grey: #353535;
  $black: #101010;
 
@@ -138,9 +140,12 @@
                 height: 3.125rem;
                 flex-shrink: 0;
                 border-radius: 1.5625rem;
-                background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+                background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
                 
                 box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+            }
+            .cta:hover{
+                background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
             }
 
         }
@@ -232,9 +237,210 @@
 
         .restaurants {
             width: 100%;
-            display: flex;
-            flex-flow: column wrap;
-            padding: 3rem 1.25rem 4.25rem 1.25rem;
+            background-color: $grey-tint-5;
+            padding: 3rem 1rem 4.12rem 1rem;
+
+            .restaurants-options{
+                display: flex;
+                margin: auto;
+                flex-flow: column nowrap;
+                
+                .flex-item:nth-child(1) {
+                    .restaurant-card {
+                        .card-header {
+                        background: no-repeat center url("../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+                        background-size: cover;
+                        }
+                    }
+                }
+                .flex-item:nth-child(2) {
+                    .restaurant-card {
+                        .card-header {
+                        background: no-repeat center url("../../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+                        background-size: cover;
+                        }
+                    }
+                }
+                .flex-item:nth-child(3) {
+                    .restaurant-card {
+                        .card-header {
+                        background: no-repeat center url("../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+                        background-size: cover;
+                        }
+                    }
+                }
+                .flex-item:nth-child(4) {
+                    .restaurant-card {
+                        .card-header {
+                        background: no-repeat center url("../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+                        background-size: cover;
+                        }
+                    }
+                }
+            }
+
+            .restaurant-card {
+                width: 100%;
+                background-color: $white;
+                border-radius: .94rem;
+                display: flex;
+                flex-flow:  column nowrap;
+                margin-top: 1.12rem;
+                overflow: hidden;
+
+                .card-header {
+
+                    height: 14.45rem;
+
+                    .badge {
+
+                        color: $green;
+                        text-align: center;
+                        font-family: Roboto;
+                        font-size: 0.875rem;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        padding: .125em;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        top:.9rem;
+                        left: 20.8rem;
+                        width: 5rem;
+                        height: 1.8125rem;
+                        border-radius: 0.125rem;
+                        background: $light-green;
+                        /* Shadow/Badge */
+                        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+                    }
+                }
+                .card-body{
+                    width: 100%;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: center;
+                    align-items: center;
+
+                    .card-content {
+                        width: 80%;
+
+                        h2 {
+                            color: $black;
+                            font-family: Roboto;
+                            font-size: 1.125rem;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: normal;
+                            margin-bottom: .31rem;
+                        }
+                        p {
+                            color: $black;
+                            font-family: Roboto;
+                            font-size: 1.0625rem;
+                            font-style: normal;
+                            font-weight: 300;
+                            line-height: normal;
+                            margin-top: 0rem;
+                        }
+                    }
+
+                    .heart-icon {
+                        width: 10%;
+                        cursor: pointer;
+                        transition: fill 0.3s;
+                        
+                        svg {
+                            width: 1.375rem;
+                            height: 1.3125rem;
+                        }
+                    }
+
+                    .heart-outline {
+                        fill: none;
+                        stroke: $black;
+                        stroke-width: 1;
+                        width: 1.375rem;
+                        height: 1.3125rem;
+                        transition: stroke 0.3s;
+                    }
+
+                    .heart-icon:hover .heart-outline,
+                    .heart-icon:active .heart-outline {
+                        stroke: none; /* Remove outline on hover and click */
+                    }
+                    
+                    .heart-icon:hover .heart-fill {
+                        fill: url(#gradient); /* Apply gradient fill on hover */
+                    }
+                }
+            }
         }
+    }
+
+    footer {
+        padding: 1.38rem 1.58rem;
+        margin: 0rem;
+        width: 100%;
+
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        background-color: $grey;
+
+        .footer-logo {
+            width: 100%;
+            color: $white;
+            font-family: $shrikhand;
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .footer-links {
+            list-style-type: none;
+            width: 100%;
+            display: flex;
+            flex-flow: column;
+            align-items: flex-start;
+            padding: 0rem;
+            gap: 1rem;
+
+            .flex-item {
+                display: flex;
+                flex-flow: row nowrap;
+                width: 100%;
+            }
+
+
+            li a {
+
+                color: $white;
+                font-size: 1rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: flex-start;
+                align-items: flex-start;
+                width: 100%;
+                gap: 1rem;
+                
+
+                i {
+                    color: $white;
+                    width: 3%;
+                }
+
+            }
+        }
+
+
+
     }
 }
