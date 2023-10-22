@@ -291,6 +291,7 @@
                 .card-header {
 
                     height: 14.45rem;
+                    position: relative;
 
                     .badge {
 
@@ -306,9 +307,9 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        position: relative;
-                        top:.9rem;
-                        left: 20.8rem;
+                        position: absolute;
+                        top: 1.4rem;
+                        right: 2rem;
                         width: 5rem;
                         height: 1.8125rem;
                         border-radius: 0.125rem;
@@ -369,12 +370,49 @@
 
                     .heart-icon:hover .heart-outline,
                     .heart-icon:active .heart-outline {
-                        stroke: none; /* Remove outline on hover and click */
+                        stroke-width: 0 !important; /* Remove outline on hover and click */
                     }
                     
                     .heart-icon:hover .heart-fill {
                         fill: url(#gradient); /* Apply gradient fill on hover */
                     }
+
+                    
+                    .heart-icon {
+                        cursor: pointer;
+                        transition: all 0.3s;
+                        position: relative;
+                    }
+                    
+                    /* Style for checked (unchecked) heart icon */
+                    .heart-checkbox {
+                        display: none; /* Hide the checkbox input */
+                    }
+                    
+                    /* Define the styles for the checked (filled) heart icon */
+                    .heart-checkbox:checked + .heart-icon .heart-fill {
+                        fill: url(#gradient); /* Apply gradient fill when checked */
+                        stroke-width: 0 !important; /* Remove outline when checked */
+                    }
+                    
+                    /* Define the styles for the unchecked (outlined) heart icon */
+                    .heart-icon .heart-fill {
+                        fill: none; /* Initial empty style (unchecked) */
+                        stroke: $black; /* Outline color (unchecked) */
+                    }
+                    
+                    /* Handle z-index to make sure the heart icon is clickable */
+                    .heart-checkbox:checked + .heart-icon::before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 1; /* Ensure the heart icon remains clickable */
+                    }
+                    
                 }
             }
         }
