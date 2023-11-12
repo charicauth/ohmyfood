@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+  color: #101010;
+}
+
+body {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  /* Style for checked (unchecked) heart icon */
+  /* Define the styles for the checked (filled) heart icon */
+  /* Define the styles for the unchecked (outlined) heart icon */
+  /* Handle z-index to make sure the heart icon is clickable */
+}
+body a {
+  text-decoration: none;
+}
+body header {
+  width: 100%;
+  padding: 0.88rem 1.06rem;
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+body header .logo {
+  width: 90%;
+  justify-self: center;
+  align-self: center;
+  background-color: #FFF;
+  z-index: 4;
+}
+body header .logo a {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0.88rem 5.56rem;
+}
+body header .previous-page-button {
+  width: 1.8rem;
+}
+body main {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-items: center;
+  justify-content: center;
+}
+body main .banniere {
+  width: 100%;
+  height: 17.18rem;
+  z-index: 0;
+}
+body main .banniere img {
+  width: 100%;
+}
+body main .restaurant-menu {
+  z-index: 2;
+  padding: 2rem 1.2rem;
+  background-color: #F6F6F6;
+  border-radius: 50px 50px 0px 0px;
+}
+body main .restaurant-menu .section-title {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+body main .restaurant-menu .section-title h1 {
+  margin-right: auto;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.75rem;
+}
+body main .restaurant-menu .title {
+  position: relative;
+  height: 1.6rem;
+}
+body main .restaurant-menu .title h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 0rem;
+  text-transform: uppercase;
+}
+body main .restaurant-menu .title:after {
+  content: "";
+  width: 3rem;
+  height: 2px;
+  background: #99E2D0;
+  position: absolute;
+  bottom: -4px;
+}
+body main .restaurant-menu .dishes {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 0rem;
+}
+body main .restaurant-menu .dishes .card {
+  width: 100%;
+  height: 4.5rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #FFF;
+  border-radius: 1rem;
+  padding: 0px;
+  position: relative;
+  cursor: pointer;
+}
+body main .restaurant-menu .dishes .card:focus {
+  background-color: #FFF;
+}
+body main .restaurant-menu .dishes .card .card-body {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0.5rem 1rem;
+}
+body main .restaurant-menu .dishes .card .card-body .card-head {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+body main .restaurant-menu .dishes .card .card-body .card-head h1 {
+  margin: 0px auto;
+}
+body main .restaurant-menu .dishes .card .card-body .card-content {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0px 0px 0px auto;
+  padding: 0px;
+}
+body main .restaurant-menu .dishes .card .card-body .card-content .content-description {
+  margin-top: 0.5rem;
+  margin-bottom: 0px;
+  margin-right: auto;
+  text-align: left;
+}
+body main .restaurant-menu .dishes .card .card-body .card-content .card-price {
+  text-align: right;
+  margin-top: 0.5rem;
+  margin-bottom: 0px;
+}
+body main .restaurant-menu .dishes .card .card-selected {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  height: 4.5rem;
+  width: 3.6rem;
+  position: absolute;
+  z-index: 0;
+  right: 0rem;
+}
+body main .restaurant-menu .dishes .card .card-selected .fa-circle-check {
+  color: #FFF;
+}
+body footer {
+  padding: 1.38rem 1.58rem;
+  margin: 0rem;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  background-color: #353535;
+}
+body footer .footer-logo {
+  width: 100%;
+  color: #FFF;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+body footer .footer-links {
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  padding: 0rem;
+  gap: 1rem;
+}
+body footer .footer-links .flex-item {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+}
+body footer .footer-links li a {
+  color: #FFF;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  gap: 1rem;
+}
+body footer .footer-links li a i {
+  color: #FFF;
+  width: 3%;
+}
+body .heart-icon {
+  width: 10%;
+  cursor: pointer;
+  transition: fill 0.3s;
+}
+body .heart-icon svg {
+  width: 1.375rem;
+  height: 1.3125rem;
+}
+body .heart-outline {
+  fill: none;
+  stroke: #101010;
+  stroke-width: 1;
+  width: 1.375rem;
+  height: 1.3125rem;
+  transition: stroke 0.3s;
+}
+body .heart-icon:hover .heart-outline,
+body .heart-icon:active .heart-outline {
+  stroke-width: 0 !important; /* Remove outline on hover and click */
+}
+body .heart-icon:hover .heart-fill {
+  fill: url(#gradient); /* Apply gradient fill on hover */
+}
+body .heart-icon {
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+}
+body .heart-checkbox {
+  display: none; /* Hide the checkbox input */
+}
+body .heart-checkbox:checked + .heart-icon .heart-fill {
+  fill: url(#gradient); /* Apply gradient fill when checked */
+  stroke-width: 0 !important; /* Remove outline when checked */
+}
+body .heart-icon .heart-fill {
+  fill: none; /* Initial empty style (unchecked) */
+  stroke: #101010; /* Outline color (unchecked) */
+}
+body .heart-checkbox:checked + .heart-icon::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Ensure the heart icon remains clickable */
+}
+
+/*# sourceMappingURL=restaurant.css.map */

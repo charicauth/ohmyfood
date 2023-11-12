@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
+
+
+// Font Variables
+ $roboto: 'Roboto', sans-serif;
+ $shrikhand: 'Shrikhand', cursive;
+
+
+//  Color Variables
+ $white: #FFF;
+ $green: #008766;
+ $light-green: #99E2D0;
+ $light-blue: #89C8FA;
+ $blue: #003A68;
+ $purple: #9356DC;
+ $pink: #FF79DA;
+ $lighter-grey: #F6F6F6;
+ $light-grey: #EAEAEA;
+ $grey-tint-4: #7E7E7E;
+ $grey-tint-5: #F6F6F6;
+ $grey: #353535;
+ $black: #101010;
+
+ * {
+    font-family: $roboto;
+    color: $black;
+ }
+
+ body {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+    }
+
+    header {
+        width: 100%;
+        padding: .88rem 1.06rem;
+        display: flex;
+        flex-flow: row-reverse nowrap;
+        justify-content: center;
+        align-items: center;
+
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
+        .logo {
+            width: 90%;
+            justify-self: center;
+            align-self: center;
+            background-color: $white;
+            z-index: 4;
+
+
+            a {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: center;
+                margin: .88rem 5.56rem;
+
+            }
+        }  
+        
+        .previous-page-button {
+            width: 1.8rem;
+        }
+    }
+
+    main {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-items: center;
+        justify-content: center;
+        
+        .banniere {
+            width: 100%;
+            height: 17.18rem;
+            z-index: 0;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .restaurant-menu {
+            z-index: 2;
+            padding: 2rem 1.2rem;
+            background-color: $lighter-grey;
+            border-radius: 50px 50px 0px 0px;
+
+            .section-title {
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+        
+                h1 {
+                    margin-right: auto;
+                    font-family: $shrikhand;
+                    font-size: 1.75rem;
+                }
+            }
+
+            .title {
+                position: relative;
+                height: 1.6rem;
+
+                h2 {
+                    font-family: $roboto;
+                    font-size: 1rem;
+                    font-weight: 300;
+                    margin-bottom: 0rem;
+                    text-transform: uppercase;
+                }
+                
+            }
+            .title:after {
+                content: '';
+                width: 3rem;
+                height: 2px;
+                background: $light-green;
+                position: absolute;
+                bottom: -4px;
+            }
+
+            // Dishes management
+            .dishes {
+                width: 100%;
+                display : flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: flex-start;
+                padding: 2rem 0rem;
+
+                .card {
+                    width: 100%;
+                    height:4.5rem;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    align-items: flex-start;
+                    justify-content: center;
+                    overflow: hidden;
+                    background-color: $white;
+                    border-radius: 1rem;
+                    padding: 0px;
+                    position: relative;
+                    cursor:pointer;
+
+                    &:focus {
+                        background-color: $white;
+                    }
+
+                    .card-body {
+                        width: 100%;
+                        display: flex;
+                        flex-flow: column nowrap;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        padding: .5rem 1rem;
+
+                        .card-head {
+                            width: 100%;
+                            padding: 0px;
+                            margin: 0px;
+
+                            h1 {
+                                margin: 0px auto;
+                            }
+                        }
+                        .card-content {
+                            width: 100%;
+                            display: flex;
+                            flex-flow: row nowrap;
+                            align-items: flex-start;
+                            justify-content: flex-start;
+                            margin: 0px  0px 0px auto;
+                            padding: 0px;
+
+                            .content-description {
+                                margin-top: .5rem;
+                                margin-bottom: 0px;
+                                margin-right: auto;
+                                text-align: left;
+                            }
+
+                            .card-price {
+                                text-align: right;
+                                margin-top: .5rem;
+                                margin-bottom: 0px;
+                            }
+                        }
+                    }
+
+                    .card-selected {
+                        display: flex;
+                        flex-flow: column nowrap;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: $light-green;
+                        height: 4.5rem;
+                        width: 3.6rem;
+                        position: absolute;
+                        z-index: 0;
+                        right: 0rem;
+
+
+                        .fa-circle-check {
+                            color: $white;
+                        }
+                    }
+
+                    
+                }
+            }
+
+        }
+
+    }
+
+    footer {
+        padding: 1.38rem 1.58rem;
+        margin: 0rem;
+        width: 100%;
+
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        background-color: $grey;
+
+        .footer-logo {
+            width: 100%;
+            color: $white;
+            font-family: $shrikhand;
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .footer-links {
+            list-style-type: none;
+            width: 100%;
+            display: flex;
+            flex-flow: column;
+            align-items: flex-start;
+            padding: 0rem;
+            gap: 1rem;
+
+            .flex-item {
+                display: flex;
+                flex-flow: row nowrap;
+                width: 100%;
+            }
+
+
+            li a {
+
+                color: $white;
+                font-size: 1rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: flex-start;
+                align-items: flex-start;
+                width: 100%;
+                gap: 1rem;
+                
+
+                i {
+                    color: $white;
+                    width: 3%;
+                }
+
+            }
+        }
+
+
+
+    }
+
+
+    // heart management
+    .heart-icon {
+        width: 10%;
+        cursor: pointer;
+        transition: fill 0.3s;
+        
+        svg {
+            width: 1.375rem;
+            height: 1.3125rem;
+        }
+    }
+
+    .heart-outline {
+        fill: none;
+        stroke: $black;
+        stroke-width: 1;
+        width: 1.375rem;
+        height: 1.3125rem;
+        transition: stroke 0.3s;
+    }
+
+    .heart-icon:hover .heart-outline,
+    .heart-icon:active .heart-outline {
+        stroke-width: 0 !important; /* Remove outline on hover and click */
+    }
+    
+    .heart-icon:hover .heart-fill {
+        fill: url(#gradient); /* Apply gradient fill on hover */
+    }
+
+    
+    .heart-icon {
+        cursor: pointer;
+        transition: all 0.3s;
+        position: relative;
+    }
+    
+    /* Style for checked (unchecked) heart icon */
+    .heart-checkbox {
+        display: none; /* Hide the checkbox input */
+    }
+    
+    /* Define the styles for the checked (filled) heart icon */
+    .heart-checkbox:checked + .heart-icon .heart-fill {
+        fill: url(#gradient); /* Apply gradient fill when checked */
+        stroke-width: 0 !important; /* Remove outline when checked */
+    }
+    
+    /* Define the styles for the unchecked (outlined) heart icon */
+    .heart-icon .heart-fill {
+        fill: none; /* Initial empty style (unchecked) */
+        stroke: $black; /* Outline color (unchecked) */
+    }
+    
+    /* Handle z-index to make sure the heart icon is clickable */
+    .heart-checkbox:checked + .heart-icon::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1; /* Ensure the heart icon remains clickable */
+    }
+ }
