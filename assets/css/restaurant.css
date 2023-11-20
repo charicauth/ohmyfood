@@ -51,6 +51,7 @@ body main {
   flex-flow: column;
   justify-items: center;
   justify-content: center;
+  background-color: #F6F6F6;
 }
 body main .banniere {
   width: 100%;
@@ -114,19 +115,23 @@ body main .restaurant-menu .dishes .card {
   background-color: #FFF;
   border-radius: 1rem;
   padding: 0px;
-  position: relative;
   cursor: pointer;
 }
-body main .restaurant-menu .dishes .card:focus {
-  background-color: #FFF;
+body main .restaurant-menu .dishes .card:hover .card-body, body main .restaurant-menu .dishes .card:active .card-body {
+  width: 80.5%;
+}
+body main .restaurant-menu .dishes .card:hover .card-selected, body main .restaurant-menu .dishes .card:active .card-selected {
+  width: 3.6rem;
 }
 body main .restaurant-menu .dishes .card .card-body {
   width: 100%;
+  margin-right: auto;
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
   justify-content: flex-start;
   padding: 0.5rem 1rem;
+  transition: width 0.2s ease-in-out;
 }
 body main .restaurant-menu .dishes .card .card-body .card-head {
   width: 100%;
@@ -153,6 +158,7 @@ body main .restaurant-menu .dishes .card .card-body .card-content .content-descr
 }
 body main .restaurant-menu .dishes .card .card-body .card-content .card-price {
   text-align: right;
+  font-weight: bold;
   margin-top: 0.5rem;
   margin-bottom: 0px;
 }
@@ -163,10 +169,8 @@ body main .restaurant-menu .dishes .card .card-selected {
   justify-content: center;
   background-color: #99E2D0;
   height: 4.5rem;
-  width: 3.6rem;
-  position: absolute;
-  z-index: 0;
-  right: 0rem;
+  width: 0rem;
+  transition: width 0.2s ease-in-out;
 }
 body main .restaurant-menu .dishes .card .card-selected .fa-circle-check {
   color: #FFF;
@@ -269,6 +273,24 @@ body .heart-checkbox:checked + .heart-icon::before {
   width: 100%;
   height: 100%;
   z-index: 1; /* Ensure the heart icon remains clickable */
+}
+body .cta {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-weight: 500;
+  margin: 1.6rem auto 4rem auto;
+  width: 13.625rem;
+  height: 3.125rem;
+  flex-shrink: 0;
+  border-radius: 1.5625rem;
+  background: linear-gradient(170deg, #FF79DA -20.44%, #9356DC 123.93%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+body .cta:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
 }
 
 /*# sourceMappingURL=restaurant.css.map */
