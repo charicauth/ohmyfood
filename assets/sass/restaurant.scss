@@ -132,6 +132,7 @@
             // Dishes management
             .dishes {
                 width: 100%;
+                gap: 1rem;
                 display : flex;
                 flex-flow: column nowrap;
                 justify-content: center;

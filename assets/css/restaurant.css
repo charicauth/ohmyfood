@@ -98,6 +98,7 @@ body main .restaurant-menu .title:after {
 }
 body main .restaurant-menu .dishes {
   width: 100%;
+  gap: 1rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
