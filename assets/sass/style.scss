@@ -1,4 +1,4 @@
-//  Google Fonts
+//  Google Fonts used
  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
 
 
@@ -34,6 +34,8 @@
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
+    
 
     a {
         text-decoration: none;
@@ -152,9 +154,10 @@
 
         .functionning {
             width: 100%;
+            max-width: 65.5625rem;
             display: flex;
-            flex-flow: column wrap;
-            padding: 3rem 1.5rem 3.25rem 1.5rem;
+            flex-flow: column nowrap;
+            padding: 3.12rem;
 
             .functionning-options {
                 display: flex;
@@ -232,20 +235,50 @@
                     color: $grey-tint-4;
                   }
 
+                }
+
+                // Responsive section
+                @media (min-width: 768px) {
+
+                    .functionning-options {
+                        display: flex;
+                        flex-flow: row nowrap;
+                        align-items: stretch;
+                        
+                        .card {
+                            width:28%;
+                        }
+                    }
+
             }
         }
 
         .restaurants {
             width: 100%;
             background-color: $grey-tint-5;
-            padding: 3rem 1rem 4.12rem 1rem;
+            padding: 3.12rem;
+
+            .wrapper {
+                max-width: 65.5625rem;
+                margin: auto;
+            }
 
             .restaurants-options{
                 display: flex;
-                margin: auto;
                 flex-flow: column nowrap;
+
+                @media (min-width: 768px) {
+                    flex-flow: row wrap;
+                    justify-content: space-between;
+                    gap: 1rem;
+
+                    .flex-item {
+                        width: 48%;
+                    }
+                }
                 
                 .flex-item:nth-child(1) {
+
                     .restaurant-card {
                         .card-header {
                         background: no-repeat center url("../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
@@ -277,6 +310,8 @@
                         }
                     }
                 }
+
+
             }
 
             .restaurant-card {
@@ -287,6 +322,10 @@
                 flex-flow:  column nowrap;
                 margin-top: 1.12rem;
                 overflow: hidden;
+
+                @media (min-width: 768px) {
+                    width: 100%;
+                }
 
                 .card-header {
 
@@ -419,23 +458,50 @@
     }
 
     footer {
-        padding: 1.38rem 1.58rem;
-        margin: 0rem;
-        width: 100%;
 
-        display: flex;
-        flex-flow: column;
-        align-items: flex-start;
         background-color: $grey;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3.12rem;
+
+        .footer-container {
+
+            width: 100%;
+            margin: auto;
+            max-width: 65.5625rem;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: flex-start;
+
+            @media (min-width:768px) {
+                
+                flex-flow: row-reverse;
+                align-items: center;
+                gap: 0rem;
+                padding: 0rem;
+                margin: 0 0 0 auto;
+    
+            }
+        }
 
         .footer-logo {
+            margin-bottom: 1.2rem;
             width: 100%;
+            align-self: center;
             color: $white;
             font-family: $shrikhand;
             font-size: 1.4rem;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+
+            @media (min-width:768px) {
+                width: auto;
+                margin-bottom: 0px;
+            }
         }
 
         .footer-links {
@@ -445,7 +511,15 @@
             flex-flow: column;
             align-items: flex-start;
             padding: 0rem;
-            gap: 1rem;
+            gap: .8rem;
+
+            @media (min-width:768px) {
+                width: 75%;
+                flex-flow: row;
+                align-items: center stretch;
+                justify-content: space-between;
+                margin-left: auto;
+            }
 
             .flex-item {
                 display: flex;
@@ -477,8 +551,5 @@
 
             }
         }
-
-
-
     }
 }

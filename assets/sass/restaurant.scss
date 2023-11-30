@@ -1,3 +1,4 @@
+// Google fonts used
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
 
  
@@ -26,20 +27,27 @@
     color: $black;
  }
 
+ html {
+    margin: 0 !important;
+    padding: 0 !important;
+ }
+
  body {
-    margin: auto;
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    background-color: $white;
+
+    overflow-x: hidden;
 
     a {
         text-decoration: none;
     }
 
     header {
-        width: 100%;
+        width: 100vw;
         padding: .88rem 1.06rem;
         display: flex;
         flex-flow: row-reverse nowrap;
@@ -72,26 +80,33 @@
     }
 
     main {
-        width: 100%;
+        width: 100vw;
         display: flex;
-        flex-flow: column;
+        flex-flow: row wrap;
         justify-items: center;
         justify-content: center;
-        background-color: $lighter-grey;
+        background-color: $white;
         
         .banniere {
-            width: 100%;
+            width: 100vw;
             height: 17.18rem;
-            z-index: 0;
-
-            img {
-                width: 100%;
-            }
+            max-height: 24rem;
+            margin:0rem 0rem -2rem 0rem;
+            padding: 0rem;
+            
+            background-image: url("/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") ;
+            background-repeat: no-repeat;
+            background-size:100vw ;
+            background-position: center center;
         }
 
         .restaurant-menu {
-            z-index: 2;
-            padding: 2rem 1.2rem;
+            width: 100vw;
+
+            max-width: 65.9375rem;
+            
+            align-self: center;
+            padding: 2rem 3.12rem;
             background-color: $lighter-grey;
             border-radius: 50px 50px 0px 0px;
 
@@ -231,25 +246,52 @@
     }
 
     footer {
-        padding: 1.38rem 1.58rem;
-        margin: 0rem;
-        width: 100%;
 
-        display: flex;
-        flex-flow: column;
-        align-items: flex-start;
         background-color: $grey;
-
-        .footer-logo {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3.12rem;
+    
+        .footer-container {
+    
             width: 100%;
+            margin: auto;
+            max-width: 65.5625rem;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: flex-start;
+    
+            @media (min-width:768px) {
+                
+                flex-flow: row-reverse;
+                align-items: center;
+                gap: 0rem;
+                padding: 0rem;
+                margin: 0 0 0 auto;
+    
+            }
+        }
+    
+        .footer-logo {
+            margin-bottom: 1.2rem;
+            width: 100%;
+            align-self: center;
             color: $white;
             font-family: $shrikhand;
             font-size: 1.4rem;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+    
+            @media (min-width:768px) {
+                width: auto;
+                margin-bottom: 0px;
+            }
         }
-
+    
         .footer-links {
             list-style-type: none;
             width: 100%;
@@ -257,17 +299,25 @@
             flex-flow: column;
             align-items: flex-start;
             padding: 0rem;
-            gap: 1rem;
-
+            gap: .8rem;
+    
+            @media (min-width:768px) {
+                width: 75%;
+                flex-flow: row;
+                align-items: center stretch;
+                justify-content: space-between;
+                margin-left: auto;
+            }
+    
             .flex-item {
                 display: flex;
                 flex-flow: row nowrap;
                 width: 100%;
             }
-
-
+    
+    
             li a {
-
+    
                 color: $white;
                 font-size: 1rem;
                 font-style: normal;
@@ -281,19 +331,15 @@
                 width: 100%;
                 gap: 1rem;
                 
-
+    
                 i {
                     color: $white;
                     width: 3%;
                 }
-
+    
             }
         }
-
-
-
     }
-
 
     // heart management
     .heart-icon {
@@ -370,7 +416,7 @@
         color: $white;
         font-weight: 500;
 
-        margin: 1.6rem auto 4rem auto; ;
+        margin: 1.6rem auto;
         width: 13.625rem;
         height: 3.125rem;
         flex-shrink: 0;
