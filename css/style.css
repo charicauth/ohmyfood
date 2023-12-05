@@ -1,0 +1,444 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+* {
+  font-family: "Roboto", sans-serif; 
+  color: #101010;
+  
+}
+
+
+body {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+body a {
+  text-decoration: none;
+}
+body header {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+body header .logo {
+  justify-self: center;
+  align-self: center;
+  width: 100%;
+  background-color: #FFF;
+  z-index: 4;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+body header .logo a {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0.88rem 5.56rem;
+}
+body header .location {
+  justify-self: center;
+  align-self: center;
+  width: 100%;
+  background-color: #EAEAEA;
+}
+body header .location a {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.06rem;
+  height: 3.125rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #353535;
+}
+body main {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+body main .title {
+  flex-shrink: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #101010;
+}
+body main .welcome {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  background-color: #F6F6F6;
+}
+body main .welcome .title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.4rem;
+  width: 17.2rem;
+  text-align: center;
+}
+body main .welcome .text {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  width: 19.7rem;
+  flex-shrink: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  text-align: center;
+}
+body main .welcome .cta {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-weight: 500;
+  margin: 1.6rem auto 4rem auto;
+  width: 13.625rem;
+  height: 3.125rem;
+  flex-shrink: 0;
+  border-radius: 1.5625rem;
+  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+body main .welcome .cta:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+}
+body main .functionning {
+  width: 100%;
+  max-width: 65.5625rem;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 3.12rem;
+}
+body main .functionning .functionning-options {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 1.62rem;
+  padding-left: 0.8rem;
+}
+body main .functionning .functionning-options .card {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-items: center;
+  align-items: center;
+  gap: 1rem;
+  width: 90%;
+  padding: 1.79rem 2.38rem 1.79rem 0rem;
+  background-color: white;
+  border-radius: 1.25rem;
+  background: var(--Background, #F6F6F6);
+  /* Shadow/Instructions */
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+body main .functionning .functionning-options .card:hover {
+  background: var(--Background, rgba(146, 86, 220, 0.1098039216));
+}
+body main .functionning .functionning-options .card-body {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-items: center;
+  align-items: center;
+  gap: 1.69rem;
+}
+body main .functionning .functionning-options .fa-mobile-screen-button {
+  width: 0.81369rem;
+  height: 1.24394rem;
+  flex-shrink: 0;
+}
+body main .functionning .functionning-options .card-content {
+  font-family: "Roboto" sans-serif;
+  font-weight: 500;
+}
+body main .functionning .functionning-options .bubble {
+  width: fit-content;
+  position: relative;
+  left: -0.75rem;
+}
+body main .functionning .functionning-options .card-bubble-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  font-size: 0.9rem;
+  color: white;
+  border-radius: 100%;
+  background-color: #9356DC;
+}
+body main .functionning .functionning-options .fa-store {
+  color: #9356DC;
+}
+body main .functionning .functionning-options .fa-mobile-screen-button, body main .functionning .functionning-options .fa-list-ul {
+  color: #7E7E7E;
+}
+@media (min-width: 768px) {
+  body main .functionning .functionning-options {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+  }
+  body main .functionning .functionning-options .card {
+    width: 28%;
+  }
+}
+body main .restaurants {
+  width: 100%;
+  background-color: #F6F6F6;
+  padding: 3.12rem;
+}
+body main .restaurants .wrapper {
+  max-width: 65.5625rem;
+  margin: auto;
+}
+body main .restaurants .restaurants-options {
+  display: flex;
+  flex-flow: column nowrap;
+}
+@media (min-width: 768px) {
+  body main .restaurants .restaurants-options {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  body main .restaurants .restaurants-options .flex-item {
+    width: 48%;
+  }
+}
+body main .restaurants .restaurants-options .flex-item:nth-child(1) .restaurant-card .card-header {
+  background: no-repeat center url("/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-size: cover;
+}
+body main .restaurants .restaurants-options .flex-item:nth-child(2) .restaurant-card .card-header {
+  background: no-repeat center url("/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-size: cover;
+}
+body main .restaurants .restaurants-options .flex-item:nth-child(3) .restaurant-card .card-header {
+  background: no-repeat center url("/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-size: cover;
+}
+body main .restaurants .restaurants-options .flex-item:nth-child(4) .restaurant-card .card-header {
+  background: no-repeat center url("/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-size: cover;
+}
+body main .restaurants .restaurant-card {
+  width: 100%;
+  background-color: #FFF;
+  border-radius: 0.94rem;
+  display: flex;
+  flex-flow: column nowrap;
+  margin-top: 1.12rem;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  body main .restaurants .restaurant-card {
+    width: 100%;
+  }
+}
+body main .restaurants .restaurant-card .card-header {
+  height: 14.45rem;
+  position: relative;
+}
+body main .restaurants .restaurant-card .card-header .badge {
+  color: #008766;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 0.125em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 1.4rem;
+  right: 2rem;
+  width: 5rem;
+  height: 1.8125rem;
+  border-radius: 0.125rem;
+  background: #99E2D0;
+  /* Shadow/Badge */
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+body main .restaurants .restaurant-card .card-body {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  /* Style for checked (unchecked) heart icon */
+  /* Define the styles for the checked (filled) heart icon */
+  /* Define the styles for the unchecked (outlined) heart icon */
+  /* Handle z-index to make sure the heart icon is clickable */
+}
+body main .restaurants .restaurant-card .card-body .card-content {
+  width: 80%;
+}
+body main .restaurants .restaurant-card .card-body .card-content h2 {
+  color: #101010;
+  font-family: Roboto;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 0.31rem;
+}
+body main .restaurants .restaurant-card .card-body .card-content p {
+  color: #101010;
+  font-family: Roboto;
+  font-size: 1.0625rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-top: 0rem;
+}
+body main .restaurants .restaurant-card .card-body .heart-icon {
+  width: 10%;
+  cursor: pointer;
+  transition: fill 0.3s;
+}
+body main .restaurants .restaurant-card .card-body .heart-icon svg {
+  width: 1.375rem;
+  height: 1.3125rem;
+}
+body main .restaurants .restaurant-card .card-body .heart-outline {
+  fill: none;
+  stroke: #101010;
+  stroke-width: 1;
+  width: 1.375rem;
+  height: 1.3125rem;
+  transition: stroke 0.3s;
+}
+body main .restaurants .restaurant-card .card-body .heart-icon:hover .heart-outline,
+body main .restaurants .restaurant-card .card-body .heart-icon:active .heart-outline {
+  stroke-width: 0 !important; /* Remove outline on hover and click */
+}
+body main .restaurants .restaurant-card .card-body .heart-icon:hover .heart-fill {
+  fill: url(#gradient); /* Apply gradient fill on hover */
+}
+body main .restaurants .restaurant-card .card-body .heart-icon {
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+}
+body main .restaurants .restaurant-card .card-body .heart-checkbox {
+  display: none; /* Hide the checkbox input */
+}
+body main .restaurants .restaurant-card .card-body .heart-checkbox:checked + .heart-icon .heart-fill {
+  fill: url(#gradient); /* Apply gradient fill when checked */
+  stroke-width: 0 !important; /* Remove outline when checked */
+}
+body main .restaurants .restaurant-card .card-body .heart-icon .heart-fill {
+  fill: none; /* Initial empty style (unchecked) */
+  stroke: #101010; /* Outline color (unchecked) */
+}
+body main .restaurants .restaurant-card .card-body .heart-checkbox:checked + .heart-icon::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Ensure the heart icon remains clickable */
+}
+body footer {
+  background-color: #353535;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3.12rem;
+}
+body footer .footer-container {
+  width: 100%;
+  margin: auto;
+  max-width: 65.5625rem;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+@media (min-width: 768px) {
+  body footer .footer-container {
+    flex-flow: row-reverse;
+    align-items: center;
+    gap: 0rem;
+    padding: 0rem;
+    margin: 0 0 0 auto;
+  }
+}
+body footer .footer-logo {
+  margin-bottom: 1.2rem;
+  width: 100%;
+  align-self: center;
+  color: #FFF;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@media (min-width: 768px) {
+  body footer .footer-logo {
+    width: auto;
+    margin-bottom: 0px;
+  }
+}
+body footer .footer-links {
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  padding: 0rem;
+  gap: 0.8rem;
+}
+@media (min-width: 768px) {
+  body footer .footer-links {
+    width: 75%;
+    flex-flow: row;
+    align-items: center stretch;
+    justify-content: space-between;
+    margin-left: auto;
+  }
+}
+body footer .footer-links .flex-item {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+}
+body footer .footer-links li a {
+  color: #FFF;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  gap: 1rem;
+}
+body footer .footer-links li a i {
+  color: #FFF;
+  width: 3%;
+}
+
+/*# sourceMappingURL=style.css.map */
