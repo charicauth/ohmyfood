@@ -11,7 +11,7 @@
 }
 
 .loader {
-  background-image: url("/images/logo/ohmyfood.png");
+  background-image: url("../images/logo/ohmyfood.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
