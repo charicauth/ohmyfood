@@ -1,8 +1,12 @@
+body {
+  margin: 0rem;
+  padding: 0rem;
+}
+
 .loader-container {
   content: "";
   width: 100vw;
   height: 100vh;
-  z-index: 9000;
   display: flex;
   flex-flow: row;
   justify-content: center; 

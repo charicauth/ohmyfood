@@ -1,5 +1,6 @@
 # folders to ignore
 node_modules/
+livrable/
 
 # files to ignore
 /package.json
