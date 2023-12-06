@@ -359,7 +359,6 @@ body main .restaurants .restaurant-card .card-body .heart-checkbox:checked + .he
 }
 body footer {
   background-color: #353535;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
